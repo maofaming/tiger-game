@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta
+      content="width=device-width,initial-scale=1,user-scalable=no"
+      name="viewport"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no,address=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <script>
+      /* 以下为 H5 响应式脚本，请不要删除！ */
+      !(function (x) {
+        function w() {
+          var v,
+            u,
+            t,
+            tes,
+            s = x.document,
+            r = s.documentElement,
+            a = r.getBoundingClientRect().width;
+          if (!v && !u) {
+            var n = !!x.navigator.appVersion.match(/AppleWebKit.*Mobile.*/);
+            v = x.devicePixelRatio;
+            tes = x.devicePixelRatio;
+            (v = n ? v : 1), (u = 1 / v);
+          }
+          if (a >= 640) {
+            r.style.fontSize = "40px";
+          } else {
+            if (a <= 320) {
+              r.style.fontSize = "20px";
+            } else {
+              r.style.fontSize = (a / 320) * 20 + "px";
+            }
+          }
+        }
+        x.addEventListener("resize", function () {
+          w();
+        });
+        w();
+      })(window);
+    </script>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?419ef7aa208d8315b2786d5f40457ae8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script src="/hlag/game/js/weixin1.4.0.min.js"></script>
+    <script src="https://static.ambercn.com/p/wx/?r=api/jsConfig"></script>
+    <script>
+      wx.ready(function () {
+        wx.isReady = true;
+        wx.setShareWx = function (nickname) {
+          dataForWeixin.img = "https://static.ambercn.com/hlag/game/share.jpg";
+          dataForWeixin.desc = dataForWeixin.title;
+          dataForWeixin.link =
+            "https://static.ambercn.com/hlag/game/index.html";
+          dataForWeixin.title = nickname + "与国创盲盒的距离就差一点点！"; //分享朋友圈的标题
+          dataForWeixin.friendTitle = nickname + "与国创盲盒的距离就差一点点！"; //分享给朋友的标题
+          dataForWeixin.friendDesc = "和萌虎一起，挑战挖宝手速。"; //分享给朋友的详情
+          dataForWeixin.callback.all = function () {};
+          dataForWeixin.update();
+        };
+
+        if (wx.userNickname) {
+          wx.setShareWx(wx.userNickname);
+        }
+      });
+    </script>
+  <link href="./css/app.css" rel="stylesheet"></head>
+  <body>
+    <div id="app"></div>
+  <script type="text/javascript" src="./js/app.7f03ef44.js"></script></body>
+</html>
